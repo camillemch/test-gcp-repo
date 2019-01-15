@@ -2,9 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/yarn'
   args: ['install']
   dir: 'functions/autodeploy'
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['test']
-  dir: 'functions/autodeploy'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', '[cm-test-repo]', 'https://us-central1-ae-lab.cloudfunctions.net/cm-test-repo ', '--runtime', 'Node.js 6', '--entry-point', 'helloGET']
   dir: 'functions/autodeploy'
