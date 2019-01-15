@@ -6,5 +6,5 @@ steps:
   args: ['test']
   dir: 'functions/autodeploy'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', '[cm-test-repo]', 'https://us-central1-ae-lab.cloudfunctions.net/cm-test-repo ', '--runtime', '[YOUR_RUNTIME]', '--entry-point', '[YOUR_FUNCTION_NAME_IN_CODE]']
+  args: ['functions', 'deploy', '[cm-test-repo]', 'https://us-central1-ae-lab.cloudfunctions.net/cm-test-repo ', '--runtime', 'Node.js 6', '--entry-point', 'helloGET']
   dir: 'functions/autodeploy'
