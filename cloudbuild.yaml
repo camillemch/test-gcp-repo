@@ -3,5 +3,17 @@ steps:
   args: ['install']
   dir: 'functions/autodeploy'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'cm-test-repo', '--trigger-http', '--runtime', 'nodejs6', '--entry-point', "helloGET"]
+  args: ['functions', 'deploy', 'cm-test-repo', '--trigger-http', '--runtime=nodejs6', '--entry-point=helloGET']
   dir: 'functions/autodeploy'
+  
+  
+
+#steps:
+#- name: 'gcr.io/cloud-builders/gcloud'
+#  args:
+#  - 'beta'
+#  - 'functions'
+#  - 'deploy'
+#  - 'cm-test-repo'
+#  - '--entry-point=helloGET'
+#  - '--trigger-http'
