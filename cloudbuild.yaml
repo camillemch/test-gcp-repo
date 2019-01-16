@@ -3,7 +3,7 @@ steps:
   args: ['install']
   dir: 'functions/autodeploy'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'cm-test-repo', '--trigger-http', '--runtime=nodejs6', '--entry-point=helloGET', '--source=https://source.developers.google.com/projects/ae-lab/repos/github_camillemhl_test-gcp-repo']
+  args: ['beta', 'functions', 'deploy', 'cm-test-repo', '--trigger-http', '--runtime=nodejs6', '--entry-point=helloGET', '--source=https://source.developers.google.com/projects/ae-lab/repos/github_camillemhl_test-gcp-repo']
   dir: 'functions/autodeploy'
   
   
